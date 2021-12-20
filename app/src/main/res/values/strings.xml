@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TheUnlocker</string>
+    <string name="enable_service">Enable this service</string>
+</resources>
