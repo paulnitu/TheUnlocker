@@ -4,6 +4,7 @@ import android.app.Service
 import android.content.Intent
 import android.content.IntentFilter
 import android.service.notification.NotificationListenerService
+import android.service.notification.StatusBarNotification
 import android.util.Log
 
 class UnlockService : NotificationListenerService() {
@@ -20,5 +21,11 @@ class UnlockService : NotificationListenerService() {
         registerReceiver(UnlockReceiver(), filter)
         return Service.START_STICKY
     }
+
+    override fun onNotificationPosted(sbn: StatusBarNotification?) {
+        super.onNotificationPosted(sbn)
+    }
+
+
 
 }
